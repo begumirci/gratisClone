@@ -237,6 +237,24 @@ img {
     padding-top:10px;
     padding-bottom:10px;
 
+    & .drawer-profile {
+        display: flex;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1;
+        opacity: .8;
+        color: #fff;
+        float: left;
+        line-height: 40px;
+        gap:10px;
+
+         & img{
+           border: 1px solid #fff;
+           border-radius: 50px;
+         }
+
+    }
+
     & p{
         font-size: 20px;
         font-weight: 300;
@@ -1303,6 +1321,11 @@ select option{
   background-color:#f2f2f299 ;
 }
 
+.product-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .product{
   display: flex;
   flex-direction: column;
@@ -1565,6 +1588,16 @@ select option{
   }
 }
 
+/* Product Filter */
+.products-filter{
+  display: none;
+}
+
+.product-price-filter{
+  display: none;
+}
+
+
 @media (min-width: 600px) {
  
   .footer-bottom-bar .bottom-links{
@@ -1774,6 +1807,164 @@ select option{
   
 }
 @media (min-width: 992px) {
+.flex {
+  display: flex;
+  }
+.product-price-filter {
+  display: block;
+}  
+.filter-container {
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    padding: 10px 128px 10px 10px;
+    margin-bottom: 20px;
+    height: auto;
+    display: flex;
+    align-items: center;
+
+    & .filter-item {
+      border-radius: 6px;
+      background-color: #490e6f0d;
+      border: solid 1px #490e6f;
+      padding-block:7px;
+      padding-inline:10px;
+      margin: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap:12px;
+
+      & p{
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: -.1px;
+        color: #e0119d;
+      }
+      & h1 {
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: normal;
+        color: #000;
+      }
+      & span {
+        color:#e0119d;
+        text-align: center;
+        background-color: #fff;
+        padding-inline:7px;
+        font-size: 17px;
+        border-radius: 50px;
+      }
+    }
+}
+.products-filter {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  border-radius: 6px;
+  overflow: hidden;
+  padding-block:15px;
+
+  & .price-inputs {
+    display: flex;
+    align-items: center;
+    gap:5px;
+
+      & input {
+        border: 1px solid #ececec;
+        font-size: 12px;
+        color: #161616;
+        margin:0;
+        outline: none;
+      }
+      & button {
+        padding-inline:15px;
+        padding-block: 5px ;
+        background-color: #490E6F;
+        color:#fff;
+        border-radius: 6px;
+      }
+    }
+
+  & .header-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:17px;
+    border-bottom:1px solid #e3e3e3;
+    border-radius: 6px;
+    padding-bottom:10px;
+    padding-inline:30px;
+
+    & img{
+      width:30px;
+      height: 27px;
+    }
+    & h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #490e6f;
+  }
+
+  }
+  
+  & .product-filter {
+    display: flex;
+    align-items: center;
+    gap:15px;
+    padding-inline:30px;
+    & .product-brand{
+      font-size: 14px;
+      font-weight: 500;
+      color: #000;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    & .product-input, .product-brand{
+      cursor: pointer;
+    }
+    & .product-input {
+      min-height: 1.5rem;
+      width:2rem;
+      border:1px solid #555;
+      border-radius: 6px;
+      position: relative;
+      
+      & input {
+        appearance: none;
+        padding:0;
+        margin: 0;
+        height: 0;
+        border-radius: 6px;
+        outline: none;
+      }
+
+      & .product-input-before{
+        position: absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right: 0;
+        border-radius: 6px;
+        background-color: #fff;
+      }
+      & .product-input-after {
+        position: absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right: 0;
+        color:#490E6F;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size:24px;
+      }
+    }
+  }
+  
+}  
 
 .mega-menu {
   padding-block:20px;
@@ -1787,7 +1978,7 @@ select option{
       flex-direction: column;
       align-items: start;
       justify-content: center;
-      & h4 {
+      & .title {
         font-size: 14px;
         font-weight: 800;
         color:#fff;
@@ -2309,13 +2500,16 @@ select option{
               color:#470f72;
               border-bottom-color:#fff;
               border-radius: 4px;
-
              }
            }
       
         & li {
            padding-right: 15px;
            padding-left: 15px;
+
+           & .signOut  {
+              color:red;
+             }
 
            & a {
               width:148.4px;

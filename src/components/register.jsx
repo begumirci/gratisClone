@@ -1,8 +1,15 @@
 import React from 'react'
 import { useState } from 'react';
 import PasswordInput from './Input-Design/password-input';
+import { supabase }  from '../routes.jsx';
+import { useNavigate } from 'react-router-dom';
+
+
+
+
 
 export default function Register() {
+     const navigate = useNavigate();
      const [step, setStep] = useState(1);
      const [isTrue, setIsTrue] = useState(false);
      const [formData, setFormData] = useState({
@@ -30,10 +37,29 @@ export default function Register() {
     }
 
 
-    function saveUser(e) {
+    async function saveUser(e) {
         e.preventDefault();
         setIsTrue(true);
-        console.log(formData);
+        
+        const { data, error } = await supabase.auth.signUp({
+            email: formData.email,
+            password: formData.password,
+            options: {
+                data: {
+                    name: formData.name,
+                    lastname: formData.lastname,
+                    phone: formData.phone,
+                    password: formData.password
+                }
+            }
+        });
+        if(error){
+            console.log(error);
+        }else{
+            console.log(data);
+            alert('Kayıt Başarılı!');
+            navigate('/');
+        }
 
     }
     return (
@@ -90,10 +116,11 @@ export default function Register() {
                         step < 5 && (<><button type='button' className='btn' onClick={NextStep} >İleri</button></>)
                     }
                     {
-                        step > 1 && (<><button type='button' className='btn' onClick={BackStep} >Geri</button></>)
+                        5 < step > 1 && (<><button type='button' className='btn' onClick={BackStep} >Geri</button></>)
                     }
                     {
-                        step >= 5 && (<><button type='submit' className='btn' >Üye Ol</button></>)
+                        step >= 5 && (<><button type='submit' className='btn' >Üye Ol</button>
+                                <button type='button' className='btn' onClick={BackStep} >Geri</button></>)
                     }
                 </div>
             </div>

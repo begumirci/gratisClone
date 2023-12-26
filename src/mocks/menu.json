@@ -1,0 +1,74 @@
+[
+    {
+        "title": "makyaj",
+        "products": [],
+        "categories": [
+            {
+                "title": "dudak makyajı",
+                "subCategories": [
+                    {
+                        "title": "Ruj",
+                        "products": [
+                            {
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Yüz makyajı",
+                "subCategories": ["Aydınlama", "Fondöten"]
+            },
+            {
+                "title": "Yüz makyajı",
+                "subCategories": [""]
+            }
+        ]
+    },
+    {
+        "title": "makyaj",
+        "categories": [
+            {
+                "title": "dudak makyajı",
+                "subCategories": ["Ruj", "Likit Ruj"]
+            }   
+        ]
+    },
+    {
+        "title": "makyaj",
+        "categories": []
+    },
+    {
+        "title": "makyaj",
+        "categories": []
+    },
+    {
+        "title": "makyaj",
+        "categories": []
+    },
+    {
+        "title": "makyaj",
+        "categories": []
+    },
+    {
+        "title": "makyaj",
+        "categories": []
+    },
+    {
+        "title": "makyaj",
+        "categories": []
+    }
+    ,
+    {
+        "title": "makyaj",
+        "categories": []
+    },
+    {
+        "title": "makyaj",
+        "categories": []
+    },
+    {
+        "title": "makyaj",
+        "categories": []
+    }
+]

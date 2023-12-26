@@ -1,22 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ProductLine from './product-line'
+import products from "../../mocks/products.json";
+import { slugify } from '../../helper';
 
 export default function ProductItems() {
   return (
     <div>
-        <div className='container'>
-          <ProductLine />
-          <div className='product-items'>
-            <Link to='/product' className="product-item">
-                <img src='/public/jel.png' alt="" />
-                <h1>Ruj</h1>
-                <div className='gradient'></div>
-                <h2>50 <span>TL</span></h2>
-                <button className='btn'>Sepete Ekle</button>
-            </Link>
-        </div>
-        </div>
-    </div>
+      <div className='product-items' >
+        {products.products.map(x => (
+          <Link to={slugify(x.title)} className="product-item" key={x.id}>
+            <img src={x.image} alt={x.title} />
+            <h1>{x.title}</h1>
+            <div className='gradient'></div>
+            <h2>{x.price} <span>TL</span></h2>
+            <button className='btn'>Sepete Ekle</button>
+          </Link>
+        ))
+        }
+      </div>
+    </div >
   )
 }

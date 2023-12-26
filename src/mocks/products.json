@@ -1,0 +1,95 @@
+{
+    "products": [
+    {
+      "id": 1,
+      "title": "Ürün 1",
+      "description": "Bu bir ürün açıklamasıdır.",
+      "brand": "Marka 1",
+      "price": 49.99,
+      "isFavorite": true,
+      "image": "https://source.unsplash.com/random/800x600/?product"
+    },
+    {
+      "id": 2,
+      "title": "Ürün 2",
+      "description": "Bu bir ürün açıklamasıdır.",
+      "brand": "Marka 2",
+      "price": 49.99,
+      "isFavorite": false,
+      "image": "https://source.unsplash.com/random/800x600/?product"
+    },
+    {
+      "id": 3,
+      "title": "Ürün 3",
+      "description": "Bu bir ürün açıklamasıdır.",
+      "brand": "Marka 3",
+      "price": 49.99,
+      "isFavorite": true,
+      "image": "https://source.unsplash.com/random/800x600/?product"
+    },
+    {
+      "id": 4,
+      "title": "Ürün 4",
+      "description": "Bu bir ürün açıklamasıdır.",
+      "brand": "Marka 4",
+      "price": 49.99,
+      "isFavorite": false,
+      "image": "https://source.unsplash.com/random/800x600/?product"
+    },
+    {
+      "id": 5,
+      "title": "Ürün 5",
+      "description": "Bu bir ürün açıklamasıdır.",
+      "brand": "Marka 5",
+      "price": 49.99,
+      "isFavorite": true,
+      "image": "https://source.unsplash.com/random/800x600/?product"
+    },
+    {
+      "id": 6,
+      "title": "Ürün 6",
+      "description": "Bu bir ürün açıklamasıdır.",
+      "brand": "Marka 6",
+      "price": 49.99,
+      "isFavorite": false,
+      "image": "https://source.unsplash.com/random/800x600/?product"
+    },
+    {
+      "id": 7,
+      "title": "Ürün 7",
+      "description": "Bu bir ürün açıklamasıdır.",
+      "brand": "Marka 7",
+      "price": 49.99,
+      "isFavorite": true,
+      "image": "https://source.unsplash.com/random/800x600/?product"
+    },
+    {
+      "id": 8,
+      "title": "Ürün 8",
+      "description": "Bu bir ürün açıklamasıdır.",
+      "brand": "Marka 8",
+      "price": 49.99,
+      "isFavorite": false,
+      "image": "https://source.unsplash.com/random/800x600/?product"
+    },
+    {
+      "id": 9,
+      "title": "Ürün 9",
+      "description": "Bu bir ürün açıklamasıdır.",
+      "brand": "Marka 9",
+      "price": 49.99,
+      "isFavorite": true,
+      "image": "https://source.unsplash.com/random/800x600/?product"
+    },
+    {
+      "id": 10,
+      "title": "Ürün 10",
+      "description": "Bu bir ürün açıklamasıdır.",
+      "brand": "Marka 10",
+      "price": 49.99,
+      "isFavorite": false,
+      "image": "https://source.unsplash.com/random/800x600/?product"
+    }
+  ]
+
+}

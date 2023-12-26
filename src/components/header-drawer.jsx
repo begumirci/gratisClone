@@ -28,7 +28,6 @@ export default function MenuDrawer() {
                 </div>
                 <Link to='/'><img className='logo' src="/public/logo.svg" alt="" /></Link>
                 <Link className='campaign'>Kampanyalar</Link>
-                {/* <HeaderSearch /> */}
             </figure>
         </>
     )

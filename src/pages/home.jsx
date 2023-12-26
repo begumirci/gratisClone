@@ -1,3 +1,4 @@
+import ProductFilter from "../components/Products/product-filter";
 import ProductItems from "../components/Products/product-items";
 import BigSlider from "../components/big-slider";
 import Slider from "../components/big-slider";
@@ -11,7 +12,14 @@ export default function Home() {
             <SearchInput />
             <BigSlider />
             <Carosel />
-            <ProductItems />
+            <div className=" container">
+                <div>
+                    <div>
+                        <ProductFilter />
+                    </div>
+                    <ProductItems />
+                </div>
+            </div>
             <CategorySection />
         </div>
     )

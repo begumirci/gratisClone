@@ -1,0 +1,14 @@
+{
+  "markalar": [
+    { "marka": "Marka1", "check": false },
+    { "marka": "Marka2", "check": false },
+    { "marka": "Marka3", "check": false },
+    { "marka": "Marka4", "check": false }
+  ],
+  "fiyatAraliklari": [
+    { "id": 1, "baslangic": 0, "bitis": 500, "check": false },
+    { "id": 2, "baslangic": 501, "bitis": 1000, "check": false },
+    { "id": 3, "baslangic": 1001, "bitis": 1500, "check": false },
+    { "id": 4, "baslangic": 1501, "bitis": 2000, "check": false }
+  ]
+}
