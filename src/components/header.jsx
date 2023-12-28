@@ -18,8 +18,7 @@ export default function Header() {
                         <img src="/public/truck.png" alt="" />
                         <p>81 ilde mağazadan ÜCRETSİZ TESLİMAT fırsatı!</p>
                     </div>
-                    
-                    
+
                     <div className='header-links'>
                         <Link>
                             <img style={{ width: '30px', height: '30px' }} src="/public/jel.png" alt="" />

@@ -1,20 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import datas from "../mocks/menu.json";
+import { supabase } from '../routes';
+import { slugify } from '../helper';
 
 export default function HeaderNav() {
+  const [category, setCategories] = useState([]);
+  useEffect(() => {
+    async function getCategories() {
+      let { data: categories, error } = await supabase
+        .from('categories')
+        .select('*');
+      setCategories(categories);
+    }
+    getCategories();
+  }, [])
+
   return (
     <div className='header-nav'>
       <div className='container'>
         <ul className='header-nav-list'>
 
-          {/* {datas.map(x => (
-            <li>
-              <Link to={x.title}>makyaj</Link>
+          {category.map(x => (
+            <li key={x.id}>
+              <Link to={`/categories/${x.slug}`} >{x.name}</Link>
               <span className='tre'></span>
               <div className='mega-menu'>
                 <div className='container'>
-                  <div className='mega-menu-lists'>
+                  {/* <div className='mega-menu-lists'>
                     {x.categories.map(x => (
                       <div>
                         <Link className='title' to={x.title}>{x.title}</Link>
@@ -23,79 +36,11 @@ export default function HeaderNav() {
                         ))}
                       </div>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </li>
-          ))} */}
-
-          <li>
-            <a href="#">Cilt Bakım</a>
-            <span className='tre'></span>
-            <div className='mega-menu'>
-              <div className='container'>
-                <div className='mega-menu-lists'>
-                  <div>
-                    <h4>Dudak Makyajı</h4>
-                    <Link>Ruj</Link>
-                    <Link>Likit Ruj</Link>
-                  </div>
-                  <div>
-                    <h4>Yüz Makyajı</h4>
-                    <Link>Aydınlatıcı</Link>
-                    <Link>Fondöten</Link>
-                  </div>
-                  <div>
-                    <h4>Makyaj Fırçaları</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <a href="#">Saç Bakım</a>
-            <span className='tre'></span>
-            <div className='mega-menu'></div>
-          </li>
-          <li>
-            <a href="#">Parfüm & Deodorant</a>
-            <span className='tre'></span>
-            <div className='mega-menu'></div>
-          </li>
-          <li>
-            <a href="#">Erkek Bakım</a>
-            <span className='tre'></span>
-            <div className='mega-menu'></div>
-          </li>
-          <li>
-            <a href="#">Kişisel Bakım</a>
-            <span className='tre'></span>
-            <div className='mega-menu'></div>
-          </li>
-          <li>
-            <a href="#">Anne & Bebek</a>
-            <span className='tre'></span>
-            <div className='mega-menu'></div>
-          </li>
-          <li>
-            <a href="#">Ev & Yaşam</a>
-            <span className='tre'></span>
-            <div className='mega-menu'></div>
-          </li>
-          <li>
-            <a href="#">Moda & Aksesuar</a>
-            <span className='tre'></span>
-            <div className='mega-menu'></div>
-          </li>
-          <li>
-            <a href="#">Süpermarket</a>
-            <span className='tre'></span>
-            <div className='mega-menu'></div>
-          </li>
-          <li>
-            <a href="#">Elektrikli Ürünler</a>
-            <div className='mega-menu'></div>
-          </li>
+          ))}
         </ul>
       </div>
     </div>
