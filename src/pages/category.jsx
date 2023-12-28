@@ -43,6 +43,7 @@ export default function Category() {
 
     function handleCheckboxChange(brandId, e) {
         const { checked } = e.target;
+
         if (!options.includes(brandId) && checked) {
             setOptions([...options, brandId]);
 
