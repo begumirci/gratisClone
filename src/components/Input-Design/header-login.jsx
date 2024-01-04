@@ -1,13 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { supabase } from '../../routes';
 import { useState } from 'react';
+import { contexim } from '../../layouts/main-layout';
 
 
-function HeaderDrop({ isSignin, setSignin }) {
+function HeaderDrop({ isSignin }) {
     async function signOut() {
         const { error } = await supabase.auth.signOut();
-        setSignin(false);
+
     }
     return (
         <>
@@ -16,8 +17,8 @@ function HeaderDrop({ isSignin, setSignin }) {
             <ul className='drop-login-wrapper'>
                 {
                     isSignin ? <>
-                        <li className='drop-login border'><Link to='/myaccount'>Hesabım</Link></li>
-                        <li><Link to='/myaccount'>Siparişlerim</Link></li>
+                        <li className='drop-login border'><Link to='/myaccount/myOrders'>Hesabım</Link></li>
+                        <li><Link to='/myaccount/myOrders'>Siparişlerim</Link></li>
                         <li><Link>Bildirimlerim</Link></li>
                         <li><Link>Ayarlarım</Link></li>
                         <li><Link>Favorilerim</Link></li>
@@ -37,20 +38,7 @@ function HeaderDrop({ isSignin, setSignin }) {
 }
 
 export default function HeaderLogin() {
-    const [isSignin, setSignin] = useState(false);
-    const [user, setUser] = useState(null)
-    useEffect(() => {
-        const subscription = supabase.auth.onAuthStateChange((event, session) => {
-
-            if (event === 'SIGNED_IN') {
-                setUser(session?.user);
-                setSignin(true);
-            }
-        });
-    }, [isSignin]);
-
-
-
+    const { isSignin, user } = useContext(contexim);
     return (
         <div className='header-login'>
             <div className='header-register-login'>
@@ -62,7 +50,7 @@ export default function HeaderLogin() {
                 <img src='/public/header-arrow.png' alt="" className='arrow-img' />
             </div>
             <div className='drop-position'>
-                <HeaderDrop isSignin={isSignin} setSignin={setSignin} />
+                <HeaderDrop isSignin={isSignin} />
             </div>
         </div>
     )

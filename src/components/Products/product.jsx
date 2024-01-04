@@ -1,27 +1,81 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
+import { useLoaderData, useNavigate, useParams } from 'react-router-dom'
+import { supabase } from '../../routes';
+import { contexim } from '../../layouts/main-layout';
+
+export async function loader({ params }) {
+
+
+  const { data: products, error } = await supabase
+    .from('products')
+    .select('id, title,price, description, category_id, brand_id, img_url')
+    .eq('title', params.product);
+  if (error) {
+    console.log(error.message);
+  } else {
+    return { products: products }
+
+  }
+}
 
 export default function Product() {
-  return (
-    <div className='product-all'>
-      <div className='container'>
-        <div className='product'>
-          <img className='product-img' src="/public/jel.png" alt="" />
-          <div className='main-product'>
-            <h1>Ruj haankjndsd kslmflkmsdfs</h1>
-            <span className='product-price'>50 <span>TL</span></span>
-            <div className='decrease-increas-like'>
-              <div className='decrease-increase'>
-                <span className='increase'>+</span>
-                <p>1</p>
-                <span className='decrease'>-</span>
-              </div>
-              <img src='/public/heart.png' alt="" style={{ width: '30px', height: '30px' }} />
-            </div>
-            <button className='btn'>Sepete Ekle</button>
-          </div>
-        </div>
-      </div>
-    </div>
+  const [count, setCount] = useState(1);
+  const { addToCart, like, isLike } = useContext(contexim);
+  const { products } = useLoaderData();
 
+  const navigate = useNavigate();
+
+  function increase() {
+    setCount(count + 1);
+  }
+
+  function decrease() {
+    if (count > 1) {
+      setCount(count - 1);
+
+    }
+  }
+
+
+
+
+
+
+  return (
+    <>
+      {
+        products.map(x => (
+          <div className='product-flex' key={x.id} >
+            <div className='product-hero'>
+              <div className='container'>
+                <div className='product'>
+                  <img className='product-img' src={x.img_url} alt="" />
+                  <div className='main-product'>
+                    <h1>{x.title}</h1>
+                    <span className='product-price'>{x.price} <span>TL</span></span>
+                    <div className='decrease-increas-like'>
+                      <div className='decrease-increase'>
+                        <span className='decrease' onClick={decrease}>-</span>
+                        <p>{count}</p>
+                        <span className='increase' onClick={increase}>+</span>
+                      </div>
+                      <img src={isLike[x.id] ? '/public/dolukalp.png' : '/public/heart.png'} alt="" style={{ width: '30px', height: '30px' }} onClick={() => like(x)} />
+                    </div>
+                    <button className='btn' onClick={() => addToCart(x, count)}>Sepete Ekle</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='product-info'>
+              <div className='container'>
+                <h1>Ürün Özellikleri</h1>
+                <p>{x.description}</p>
+              </div>
+            </div>
+          </div>
+
+        ))
+      }
+    </>
   )
 }

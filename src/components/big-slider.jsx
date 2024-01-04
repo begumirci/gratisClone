@@ -11,27 +11,21 @@ export default function BigSlider() {
         slidesToShow: 1,
         slidesToScroll: 1
     };
-  
+
     return (
         <div className='big-slider'>
             <Slider {...settings}>
                 <div className='slider-div'>
-                    <img src="https://img.gratis.com/staticimages/egergergerg_0/8805532631090_1702021188982.jpg?v=907067704243663" alt="" />
+                    <img src="https://img.gratis.com/staticimages/fdbdfbdffdbdf_0/8806973734962_1704290302053.jpg?v=615405050684429" alt="" className='mobil-img' />
+                    <img src="https://img.gratis.com/staticimages/regergerr_0/8806973702194_1704290255304.jpg?v=615358302734784" alt="" className='main-img' />
                 </div>
                 <div className='slider-div'>
-                    <img src="https://img.gratis.com/staticimages/dsvdsfvdfvdf_0/8805532303410_1702020676063.jpg?v=906554785231901" alt="" />
+                    <img src="https://img.gratis.com/staticimages/fdbdfbdffdbdf_0/8806973734962_1704290302053.jpg?v=615405050684429" alt="" className='mobil-img' />
+                    <img src="https://img.gratis.com/staticimages/regergerr_0/8806973702194_1704290255304.jpg?v=615358302734784" alt="" className='main-img' />
                 </div >
                 <div className='slider-div'>
-                    <img src="https://img.gratis.com/staticimages/dsvdsfvdfvdf_0/8805532303410_1702020676063.jpg?v=906554785231901" alt="" />
-                </div>
-                <div className='slider-div'>
-                    <img src="https://img.gratis.com/staticimages/dsvdsfvdfvdf_0/8805532303410_1702020676063.jpg?v=906554785231901" alt="" />
-                </div>
-                <div className='slider-div'>
-                    <img src="https://img.gratis.com/staticimages/dsvdsfvdfvdf_0/8805532303410_1702020676063.jpg?v=906554785231901" alt="" />
-                </div>
-                <div className='slider-div'>
-                    <img src="https://img.gratis.com/staticimages/dsvdsfvdfvdf_0/8805532303410_1702020676063.jpg?v=906554785231901" alt="" />
+                    <img src="https://img.gratis.com/staticimages/fdbdfbdffdbdf_0/8806973734962_1704290302053.jpg?v=615405050684429" alt="" className='mobil-img' />
+                    <img src="https://img.gratis.com/staticimages/regergerr_0/8806973702194_1704290255304.jpg?v=615358302734784" alt="" className='main-img' />
                 </div>
             </Slider>
         </div>

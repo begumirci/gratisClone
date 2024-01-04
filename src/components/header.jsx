@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import MenuDrawer from './header-drawer'
 import HeaderBasket from './header-basket'
-import Filter from './filter'
 import HeaderLogin from './Input-Design/header-login'
 import HeaderSearch from './Input-Design/header-search'
 import HeaderNav from './header-nav'
+import SearchInput from './search-input'
 
 
 export default function Header() {
@@ -58,6 +58,7 @@ export default function Header() {
             <div>
                 <HeaderNav />
             </div>
+            <SearchInput />
         </header>
     )
 }
