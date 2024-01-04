@@ -8,6 +8,8 @@ import { contexim } from '../layouts/main-layout';
 
 export async function loader({ params }) {
 
+    console.log(params);
+
     const { data: category, error } = await supabase
         .from('categories')
         .select('id, name, slug')

@@ -5,8 +5,9 @@ import { useState } from 'react';
 import { contexim } from '../../layouts/main-layout';
 
 export default function Likes() {
+    const { isSignin, user, myFav, setMyFav, like, isLike } = useContext(contexim);
 
-    const { isSignin, user, myFav, setMyFav, like } = useContext(contexim);
+
 
     useEffect(() => {
         async function getFav() {
@@ -22,9 +23,12 @@ export default function Likes() {
                     setMyFav(fav);
                 }
             }
+
+
         }
         getFav();
-    }, [isSignin, myFav]);
+    }, [isSignin, myFav, isLike]);
+
     return (
         <div className='order-card'>
             <div className='order-container'>

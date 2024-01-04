@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
-import Login from './login';
-import Register from './register';
+import Login from '../pages/login';
+import Register from '../pages/register';
 import SearchInput from './search-input';
 
 

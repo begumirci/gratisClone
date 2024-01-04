@@ -18,7 +18,7 @@ export default function MainLayout() {
     const [isSignin, setSignin] = useState(false);
     const [search, setSearch] = useState('');
     const [allProducts, setAllProducts] = useState([]);
-    const [isLike, setIsLike] = useStickyState({});
+    const [isLike, setIsLike] = useState({});
     const [myFav, setMyFav] = useState([]);
 
     const navigate = useNavigate();
@@ -264,27 +264,28 @@ export default function MainLayout() {
     }
 
     async function like(product) {
+
+        console.log(isLike[product.id]);
         console.log(product);
+
         setIsLike((prev) => {
             const updateLike = { ...prev };
             updateLike[product.id] = !prev[product.id];
             return updateLike;
         })
 
-
         if (isSignin) {
-            if (isLike[product.id]) {
-
+            if (isLike[product.id] == true) {
                 const { error } = await supabase
                     .from('favorites')
                     .delete()
                     .eq('user_id', user.id)
-                    .eq('id', product.id);
+                    .eq('title', product.title);
                 if (error) {
                     console.log(error);
                 }
             }
-            if (!isLike[product.id]) {
+            if (isLike[product.id] == false) {
                 if (!myFav.find(x => x.id == product.id)) {
                     const { data, error } = await supabase
                         .from('favorites')

@@ -19,9 +19,9 @@ function HeaderDrop({ isSignin }) {
                     isSignin ? <>
                         <li className='drop-login border'><Link to='/myaccount/myOrders'>Hesabım</Link></li>
                         <li><Link to='/myaccount/myOrders'>Siparişlerim</Link></li>
-                        <li><Link>Bildirimlerim</Link></li>
+                        <li><Link to='/myaccount/myNotification'>Bildirimlerim</Link></li>
                         <li><Link>Ayarlarım</Link></li>
-                        <li><Link>Favorilerim</Link></li>
+                        <li><Link to='/myaccount/favorites'>Favorilerim</Link></li>
                         <li onClick={signOut}><Link className='signOut'>Çıkış Yap</Link></li>
                     </> : <>
                         <li className='drop-login border'><Link to='/login'>Giriş Yap</Link></li>

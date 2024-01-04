@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/home";
 import MainLayout from "./layouts/main-layout";
 import LoginTwister from "./components/login-register";
-import Register from "./components/register";
+import Register from "./pages/register";
 import Basket from "./pages/basket";
 import Product from "./components/Products/product";
 import PasswordChange from "./components/Account-type/password-change";
