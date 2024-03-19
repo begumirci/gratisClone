@@ -6,28 +6,28 @@ export default function CategorySection() {
       <h1>Tüm Kategoriler</h1>
       <div className='categories'>
         <Link>
-          <img src='/public/makyaj.png' alt='' />
+          <img src='public/makyaj.png' alt='' />
         </Link>
         <Link>
-          <img src='/public/cilt.png' alt='' />
+          <img src='public/cilt.png' alt='' />
         </Link>
         <Link>
-          <img src='/public/sac.png' alt='' />
+          <img src='public/sac.png' alt='' />
         </Link>
         <Link>
-          <img src='/public/parfum.png' alt='' />
+          <img src='public/parfum.png' alt='' />
         </Link>
         <Link>
-          <img src='/public/erkekbakim.png' alt='' />
+          <img src='public/erkekbakim.png' alt='' />
         </Link>
         <Link>
-          <img src='/public/saglik.png' alt='' />
+          <img src='public/saglik.png' alt='' />
         </Link>
         <Link>
-          <img src='/public/annebebek.png' alt='' />
+          <img src='public/annebebek.png' alt='' />
         </Link>
         <Link>
-          <img src='/public/evyasam.png' alt='' />
+          <img src='public/evyasam.png' alt='' />
         </Link>
       </div>
     </div>

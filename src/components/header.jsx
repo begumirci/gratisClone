@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import MenuDrawer from './header-drawer';
 import HeaderBasket from './header-basket';
@@ -13,7 +12,7 @@ export default function Header() {
       <div className='header'>
         <div className='container header-wrapper'>
           <div className='useful-info'>
-            <img src='/public/truck.png' alt='' />
+            <img src='public/truck.png' alt='' />
             <p>Bu gerçek bir gratis sitesi değildir!</p>
           </div>
 
@@ -21,17 +20,17 @@ export default function Header() {
             <Link>
               <img
                 style={{ width: '30px', height: '30px' }}
-                src='/public/jel.png'
+                src='public/jel.png'
                 alt=''
               />
               <span>Gratis Beauty</span>
             </Link>
             <Link>
-              <img src='/public/header-gift.png' alt='' />
+              <img src='public/header-gift.png' alt='' />
               <span>Hediye Kart</span>
             </Link>
             <Link>
-              <img src='/public/header-help.png' alt='' />
+              <img src='public/header-help.png' alt='' />
               <span>Yardım ve Destek</span>
             </Link>
           </div>
@@ -45,12 +44,12 @@ export default function Header() {
             <HeaderSearch />
             <HeaderLogin />
             <Link>
-              <img src='/public/heart.png' alt='' />
+              <img src='public/heart.png' alt='' />
             </Link>
             <HeaderBasket />
             <Link className='header-action count-bell'>
               <div className='bell'>
-                <img src='/public/bell.png' alt='' />
+                <img src='public/bell.png' alt='' />
                 <span>0</span>
               </div>
             </Link>
