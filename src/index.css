@@ -1297,6 +1297,16 @@ select option {
 .btn- {
   background-color: #fff;
   border: 1px solid #490e6f;
+
+  & a {
+    color: #490e6f;
+  }
+
+  &:hover {
+    & a {
+      color: #fff;
+    }
+  }
 }
 
 .btn-- {
@@ -1305,6 +1315,11 @@ select option {
   border: 1px solid #490e6f;
   & a {
     color: #fff;
+  }
+  &:hover {
+    & a {
+      color: #490e6f;
+    }
   }
 }
 
@@ -2139,7 +2154,7 @@ select option {
 
       & .product-filters {
         & .header-filter {
-          width: 200px;
+          min-width: 250px;
         }
       }
       & .price-filters {
