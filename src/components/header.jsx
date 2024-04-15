@@ -5,6 +5,7 @@ import HeaderLogin from './Input-Design/header-login';
 import HeaderSearch from './Input-Design/header-search';
 import HeaderNav from './header-nav';
 import SearchInput from './search-input';
+import bell from '../../public/bell.png';
 
 export default function Header() {
   return (
@@ -49,7 +50,7 @@ export default function Header() {
             <HeaderBasket />
             <Link className='header-action count-bell'>
               <div className='bell'>
-                <img src='public/bell.png' alt='' />
+                <img src={bell} alt='' />
                 <span>0</span>
               </div>
             </Link>
