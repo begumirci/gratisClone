@@ -44,7 +44,7 @@ export default function Header() {
             <HeaderSearch />
             <HeaderLogin />
             <Link>
-              <img src='public/heart.png' alt='' />
+              <img src='../../public/heart.png' alt='' />
             </Link>
             <HeaderBasket />
             <Link className='header-action count-bell'>
