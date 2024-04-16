@@ -4,6 +4,7 @@ import { useLoaderData } from 'react-router-dom';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { contexim } from '../layouts/main-layout';
+import headerArrow from '../../public/header-arrow.png';
 
 export async function loader({ params }) {
   console.log(params);
@@ -119,7 +120,7 @@ export default function Category() {
                 <div className='header-filter'>
                   <h4>Markalar</h4>
                   <img
-                    src='public/header-arrow.png'
+                    src={headerArrow}
                     alt=''
                     onClick={() => {
                       setOpenBrand(!openBrand);
@@ -150,7 +151,7 @@ export default function Category() {
                 <div className='header-filter'>
                   <h4>Fiyat</h4>
                   <img
-                    src='public/header-arrow.png'
+                    src={headerArrow}
                     alt=''
                     onClick={() => setOpenPrice(!openPrice)}
                   />

@@ -1,6 +1,10 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { contexim } from '../layouts/main-layout';
+import leftArrow from '../../public/left-arrow.png';
+import fullHeart from '../../public/dolukalp.png';
+import emtyHeart from '../../public/heart.png';
+import arrow from '../../public/arrow.png';
 
 export default function Basket() {
   const {
@@ -21,7 +25,7 @@ export default function Basket() {
             <div className='mobil-basket-header'>
               <h1>Sepetim</h1>
               <Link to='/'>
-                <img src='public/left-arrow.png' alt='' />
+                <img src={leftArrow} alt='' />
                 <span>Alışverişe Devam Et</span>
               </Link>
             </div>
@@ -46,9 +50,7 @@ export default function Basket() {
                       </button>
                       <img
                         src={
-                          isLike[x.product_id]
-                            ? 'public/dolukalp.png'
-                            : 'public/heart.png'
+                          isLike[x.product_id] ? { fullHeart } : { emtyHeart }
                         }
                         alt=''
                         style={{ width: '30px', height: '30px' }}
@@ -90,7 +92,7 @@ export default function Basket() {
             <Link to={isSignin ? '/' : '/login'}>
               <button onClick={order}>
                 Satın Al
-                <img src='public/arrow.png' alt='' />
+                <img src={arrow} alt='' />
               </button>
             </Link>
           </div>

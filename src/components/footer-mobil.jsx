@@ -1,4 +1,14 @@
 import { Link } from 'react-router-dom';
+import facebook from '../../public/facebook.svg';
+import instagram from '../../public/instagram.svg';
+import twitter from '../../public/twitter.svg';
+import youtube from '../../public/youtube.svg';
+import phone from '../../public/phone.png';
+import shop from '../../public/shop,png';
+import catolog from '../../public/catalog.png';
+import apple from '../../public/apple.svg';
+import googlePlay from '../../public/play.svg';
+import logoFooter from '../../public/logo-footer.svg';
 
 export default function FooterMobil() {
   return (
@@ -6,16 +16,16 @@ export default function FooterMobil() {
       <div className='footer-mobil-bar'>
         <div className='call-us-bar'>
           <Link>
-            <img src='public/phone.png' alt='' />0 850 210 69 00
+            <img src={phone} alt='' />0 850 210 69 00
           </Link>
         </div>
         <div className='navs'>
           <Link>
-            <img src='public/shop.png' alt='' />
+            <img src={shop} alt='' />
             <span>Hediye Kart</span>
           </Link>
           <Link>
-            <img src='public/catalog.png' alt='' />
+            <img src={catolog} alt='' />
             <span>Katalog</span>
           </Link>
         </div>
@@ -32,30 +42,30 @@ export default function FooterMobil() {
         </div>
         <div className='navs app-links'>
           <Link>
-            <img src='public/apple.svg' alt='' />
+            <img src={apple} alt='' />
             <span>App Store</span>
           </Link>
           <Link>
-            <img src='public/play.svg' alt='' />
+            <img src={googlePlay} alt='' />
             <span>Google Play</span>
           </Link>
         </div>
         <div className='social-links'>
           <Link>
-            <img src='public/facebook.svg' alt='' />
+            <img src={facebook} alt='' />
           </Link>
           <Link>
-            <img src='public/instagram.svg' alt='' />
+            <img src={instagram} alt='' />
           </Link>
           <Link>
-            <img src='public/twitter.svg' alt='' />
+            <img src={twitter} alt='' />
           </Link>
           <Link>
-            <img src='public/youtube.svg' alt='' />
+            <img src={youtube} alt='' />
           </Link>
         </div>
         <div className='footer-bottom-bar'>
-          <img src='public/logo-footer.svg' alt='' />
+          <img src={logoFooter} alt='' />
           <span>Copyright © 2015, Gratis A.Ş.</span>
           <div className='bottom-links'>
             <div>
@@ -117,15 +127,15 @@ export default function FooterMobil() {
               </div>
               <div className='footer-links-icon font'>
                 <Link>
-                  <img src='public/shop.png' alt='' />
+                  <img src={shop} alt='' />
                   Mağazalarımız
                 </Link>
                 <Link>
-                  <img src='public/shop.png' alt='' />
+                  <img src={shop} alt='' />
                   Hediye Kart
                 </Link>
                 <Link>
-                  <img src='public/catalog.png' alt='' />
+                  <img src={catolog} alt='' />
                   Katalog
                 </Link>
               </div>
@@ -145,7 +155,7 @@ export default function FooterMobil() {
                 <Link>Kolay İade</Link>
                 <Link>Üyelik</Link>
                 <Link className='communication'>
-                  <img src='public/phone.png' alt='' />
+                  <img src={phone} alt='' />
                   <span>0 850 210 69 00</span>
                 </Link>
               </div>
@@ -154,30 +164,30 @@ export default function FooterMobil() {
             <div className='footer-links-icon'>
               <h4>Bizi Takip Edin</h4>
               <Link>
-                <img src='public/facebook.svg' alt='' />
+                <img src={facebook} alt='' />
                 Facebook
               </Link>
               <Link>
-                <img src='public/instagram.svg' alt='' />
+                <img src={instagram} alt='' />
                 İnstagram
               </Link>
               <Link>
-                <img src='public/twitter.svg' alt='' />
+                <img src={twitter} alt='' />
                 Twitter
               </Link>
               <Link>
-                <img src='public/youtube.svg' alt='' />
+                <img src={youtube} alt='' />
                 Youtube
               </Link>
             </div>
             <div className='footer-links-icon'>
               <h4>Uygulamamızı İndirin</h4>
               <Link>
-                <img src='public/apple.svg' alt='' />
+                <img src={apple} alt='' />
                 App Store
               </Link>
               <Link>
-                <img src='public/play.svg' alt='' />
+                <img src={googlePlay} alt='' />
                 Google Play
               </Link>
             </div>
@@ -197,7 +207,7 @@ export default function FooterMobil() {
           </div>
         </div>
         <div className='footer-bottom-bar'>
-          <img src='public/logo-footer.svg' alt='' />
+          <img src={logoFooter} alt='' />
           <span>Copyright © 2015, Gratis A.Ş.</span>
           <div className='bottom-links-top'>
             <div className='bottom-links'>

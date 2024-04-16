@@ -5,6 +5,10 @@ import { supabase } from '../routes';
 import avatar from '../../public/avatar.svg';
 import anasayfa from '../../public/anasayfa.svg';
 import arrow from '../../public/arrow.png';
+import backArrow from '../../public/backarrow.png';
+import cargo from '../../public/cargo.png';
+import giftCart from '../../public/gift-card.png';
+import helpCart from '../../public/help-white.png';
 
 export default function Filter({ setIsOpen }) {
   const [isSignin, setSignin] = useState(false);
@@ -50,7 +54,7 @@ export default function Filter({ setIsOpen }) {
           <div className='drawer-header'>
             {isSignin ? (
               <div className='drawer-profile'>
-                <img src='public/avatar.svg' alt='' />
+                <img src={avatar} alt='' />
                 {user?.user_metadata.name} {user?.user_metadata.lastname}
               </div>
             ) : (
@@ -61,7 +65,7 @@ export default function Filter({ setIsOpen }) {
             ) : (
               <Link to='/login' onClick={handleClose}>
                 <button>
-                  <img src='public/avatar.svg' alt='' />
+                  <img src={avatar} alt='' />
                   <span>Giriş Yap veya Üye Ol</span>
                 </button>
               </Link>
@@ -70,12 +74,12 @@ export default function Filter({ setIsOpen }) {
           {isSignin ? (
             <div className='drawer-main'>
               <Link to='/' className='w-img' onClick={handleClose}>
-                <img src='/anasayfa.svg' alt='' />
+                <img src={anasayfa} alt='' />
                 <span>Anasayfa</span>
               </Link>
               <Link className='category' onClick={handleCategory}>
                 <span>Kategoriler</span>
-                <img src='/arrow.png' alt='' />
+                <img src={arrow} alt='' />
               </Link>
               <Link onClick={handleClose}>
                 <span>Markalar</span>
@@ -86,15 +90,15 @@ export default function Filter({ setIsOpen }) {
                 className='w-img'
                 onClick={handleClose}
               >
-                <img src='/cargo.png' alt='' />
+                <img src={cargo} alt='' />
                 <span>Siparişlerim</span>
               </Link>
               <Link className='w-img' onClick={handleClose}>
-                <img src='/gift-card.png' alt='' />
+                <img src={giftCart} alt='' />
                 <span>Hediye Kart</span>
               </Link>
               <Link className='w-img' onClick={handleClose}>
-                <img src='/help-white.png' alt='' />
+                <img src={helpCart} alt='' />
                 <span>Yardım ve Destek</span>
               </Link>
               <Link onClick={signOut}>Çıkış Yap</Link>
@@ -102,27 +106,27 @@ export default function Filter({ setIsOpen }) {
           ) : (
             <div className='drawer-main'>
               <Link to='/' className='w-img' onClick={handleClose}>
-                <img src='/anasayfa.svg' alt='' />
+                <img src={anasayfa} alt='' />
                 <span>Anasayfa</span>
               </Link>
               <Link className='category' onClick={handleCategory}>
                 <span>Kategoriler</span>
-                <img src='/arrow.png' alt='' />
+                <img src={arrow} alt='' />
               </Link>
               <Link onClick={handleClose}>
                 <span>Markalar</span>
               </Link>
               <Link onClick={handleClose}>Kampanyalar</Link>
               <Link to='/login' className='w-img' onClick={handleClose}>
-                <img src='/cargo.png' alt='' />
+                <img src={cargo} alt='' />
                 <span>Siparişlerim</span>
               </Link>
               <Link className='w-img' onClick={handleClose}>
-                <img src='/gift-card.png' alt='' />
+                <img src={giftCart} alt='' />
                 <span>Hediye Kart</span>
               </Link>
               <Link className='w-img' onClick={handleClose}>
-                <img src='/help-white.png' alt='' />
+                <img src={helpCart} alt='' />
                 <span>Yardım ve Destek</span>
               </Link>
             </div>
@@ -132,7 +136,7 @@ export default function Filter({ setIsOpen }) {
         <>
           <div className='drawer-header'>
             <div onClick={handleCategory}>
-              <img src='public/backarrow.png' alt='' />
+              <img src={backArrow} alt='' />
               <p>Menü</p>
             </div>
           </div>

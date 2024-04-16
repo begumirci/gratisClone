@@ -1,11 +1,16 @@
 import { Link } from 'react-router-dom';
 
+import shopping from '../../public/shopping.svg';
+import help from '../../public/help.svg';
+import kamyon from '../../public/kamyon.svg';
+import iletisim from '../../public/iletisim.svg';
+
 export function FooterMainInfo() {
   return (
     <div className='footer-bar'>
       <ul className='footer-bar-list'>
         <Link className='footer-bar-item'>
-          <img src='public/shopping.svg' alt='' />
+          <img src={shopping} alt='' />
           <span>Mağazalarımız</span>
           <span className='line'></span>
         </Link>
@@ -20,7 +25,7 @@ export function FooterMainInfo() {
           <span className='line'></span>
         </li>
         <li className='footer-bar-item'>
-          <img src={contact} alt='' />
+          <img src={iletisim} alt='' />
           <a href='#'>İletişim</a>
         </li>
       </ul>
@@ -35,21 +40,21 @@ export default function FooterMobilInfo() {
         <div className='useful-links container'>
           <div>
             <Link href='#'>
-              <img src='public/shopping.svg' alt='' />
+              <img src={shopping} alt='' />
               <span>Mağazalarımız</span>
             </Link>
             <Link href='#'>
-              <img src='public/help.svg' alt='' />
+              <img src={help} alt='' />
               <span>Yardım ve Destek</span>
             </Link>
           </div>
           <div>
             <Link href='#'>
-              <img src='public/kamyon.svg' alt='' />
+              <img src={kamyon} alt='' />
               <span>Kolay İade</span>
             </Link>
             <Link href='#'>
-              <img src='public/iletisim.svg' alt='' />
+              <img src={iletisim} alt='' />
               <span>İletişim</span>
             </Link>
           </div>
@@ -63,17 +68,17 @@ export default function FooterMobilInfo() {
             <span className='line'></span>
           </Link>
           <Link href='#'>
-            <img src='public/help.svg' alt='' />
+            <img src={help} alt='' />
             <span>Yardım ve Destek</span>
             <span className='line'></span>
           </Link>
           <Link href='#'>
-            <img src='public/kamyon.svg' alt='' />
+            <img src={kamyon} alt='' />
             <span>Kolay İade</span>
             <span className='line'></span>
           </Link>
           <Link href='#'>
-            <img src='public/iletisim.svg' alt='' />
+            <img src={iletisim} alt='' />
             <span>İletişim</span>
           </Link>
         </div>

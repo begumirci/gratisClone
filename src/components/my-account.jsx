@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
-import PasswordChange from './Account-type/password-change';
-import { supabase } from '../routes';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-export default function MyAccount() {
+import { supabase } from '../routes';
+import avatar from '../../public/avatar.svg';
+import headerArrow from '../../public/header-arrow.png';
+
+export default function MyAccount({ setSignin }) {
   const [show, setShow] = useState(false);
 
   async function signOut() {
@@ -17,7 +19,7 @@ export default function MyAccount() {
         <div className='my-account-drop'>
           <h5>Hesabım</h5>
           <img
-            src='/public/header-arrow.png'
+            src={headerArrow}
             onClick={() => {
               setShow(!show);
             }}
@@ -36,7 +38,7 @@ export default function MyAccount() {
           ''
         )}
         <div className='my-account-header'>
-          <img src='public/avatar.svg' alt='' />
+          <img src={avatar} alt='' />
           <h1>Begüm Ircı</h1>
         </div>
       </div>
@@ -45,7 +47,7 @@ export default function MyAccount() {
         <div className='account-card-btns'>
           <div className='my-account-card'>
             <div className='my-account-header'>
-              <img src='public/avatar.svg' alt='' />
+              <img src={avatar} alt='' />
               <h2>Begüm Ircı</h2>
             </div>
             <div className='my-account-list'>
