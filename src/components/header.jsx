@@ -6,6 +6,11 @@ import HeaderSearch from './Input-Design/header-search';
 import HeaderNav from './header-nav';
 import SearchInput from './search-input';
 import bell from '../../public/bell.png';
+import jel from '../../public/jel.png';
+import headerGift from '../../public/header-gift.png';
+import truck from '../../public/truck.png';
+import headerHelp from '../../public/header-help.png';
+import heart from '../../public/heart.png';
 
 export default function Header() {
   return (
@@ -13,25 +18,21 @@ export default function Header() {
       <div className='header'>
         <div className='container header-wrapper'>
           <div className='useful-info'>
-            <img src='public/truck.png' alt='' />
+            <img src={truck} alt='' />
             <p>Bu gerçek bir gratis sitesi değildir!</p>
           </div>
 
           <div className='header-links'>
             <Link>
-              <img
-                style={{ width: '30px', height: '30px' }}
-                src='public/jel.png'
-                alt=''
-              />
+              <img style={{ width: '30px', height: '30px' }} src={jel} alt='' />
               <span>Gratis Beauty</span>
             </Link>
             <Link>
-              <img src='public/header-gift.png' alt='' />
+              <img src={headerGift} alt='' />
               <span>Hediye Kart</span>
             </Link>
             <Link>
-              <img src='public/header-help.png' alt='' />
+              <img src={headerHelp} alt='' />
               <span>Yardım ve Destek</span>
             </Link>
           </div>
@@ -45,7 +46,7 @@ export default function Header() {
             <HeaderSearch />
             <HeaderLogin />
             <Link>
-              <img src='../../public/heart.png' alt='' />
+              <img src={heart} alt='' />
             </Link>
             <HeaderBasket />
             <Link className='header-action count-bell'>

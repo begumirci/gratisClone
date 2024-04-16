@@ -1,4 +1,12 @@
 import { Link } from 'react-router-dom';
+import cilt from '../../public/cilt.png';
+import makyaj from '../../public/makyaj.png';
+import sac from '../../public/sac.png';
+import parfum from '../../public/parfum.png';
+import erkekbakim from '../../public/erkekbakim.png';
+import saglik from '../../public/saglik.png';
+import annebebek from '../../public/annebebek.png';
+import evyasam from '../../public/evyasam.png';
 
 export default function CategorySection() {
   return (
@@ -6,28 +14,28 @@ export default function CategorySection() {
       <h1>Tüm Kategoriler</h1>
       <div className='categories'>
         <Link>
-          <img src='public/makyaj.png' alt='' />
+          <img src={makyaj} alt='' />
         </Link>
         <Link>
-          <img src='public/cilt.png' alt='' />
+          <img src={cilt} alt='' />
         </Link>
         <Link>
-          <img src='public/sac.png' alt='' />
+          <img src={sac} alt='' />
         </Link>
         <Link>
-          <img src='public/parfum.png' alt='' />
+          <img src={parfum} alt='' />
         </Link>
         <Link>
-          <img src='public/erkekbakim.png' alt='' />
+          <img src={erkekbakim} alt='' />
         </Link>
         <Link>
-          <img src='public/saglik.png' alt='' />
+          <img src={saglik} alt='' />
         </Link>
         <Link>
-          <img src='public/annebebek.png' alt='' />
+          <img src={annebebek} alt='' />
         </Link>
         <Link>
-          <img src='public/evyasam.png' alt='' />
+          <img src={evyasam} alt='' />
         </Link>
       </div>
     </div>

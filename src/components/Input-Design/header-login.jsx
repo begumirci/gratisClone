@@ -1,12 +1,18 @@
-import React, { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { supabase } from '../../routes';
-import { useState } from 'react';
-import { contexim } from '../../layouts/main-layout';
 
-function HeaderDrop({ isSignin }) {
+import { contexim } from '../../layouts/main-layout';
+import headerArrow from '../../../public/header-arrow.png';
+import avatar from '../../../public/avatar.svg';
+
+function HeaderDrop() {
+  const { isSignin } = useContext(contexim);
   async function signOut() {
     const { error } = await supabase.auth.signOut();
+    if (error) {
+      console.log(error);
+    }
   }
   return (
     <>
@@ -66,12 +72,12 @@ export default function HeaderLogin() {
   return (
     <div className='header-login'>
       <div className='header-register-login'>
-        <img src='public/avatar.svg' alt='' />
+        <img src={avatar} alt='' />
         <div>
           <span>{isSignin ? `${user?.user_metadata.name}` : 'Giriş Yap'}</span>
           <span>{isSignin ? 'Hesabım' : 'Üye Ol'}</span>
         </div>
-        <img src='public/header-arrow.png' alt='' className='arrow-img' />
+        <img src={headerArrow} alt='' className='arrow-img' />
       </div>
       <div className='drop-position'>
         <HeaderDrop isSignin={isSignin} />

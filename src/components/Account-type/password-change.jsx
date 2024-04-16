@@ -1,6 +1,8 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { supabase } from '../../routes';
+import sari from '../../../public/sarisey.png';
+import passwordOn from '../../../public/password-on.svg';
+import passwordOff from '../../../public/password-off.svg';
 
 export default function PasswordChange() {
   const [isSignin, setSignin] = useState(false);
@@ -27,7 +29,7 @@ export default function PasswordChange() {
 
     if (userPassword == userPasswords.password1) {
       if (userPasswords.password2 == userPasswords.password3) {
-        const { data, error } = await supabase.auth.updateUser({
+        const { data } = await supabase.auth.updateUser({
           password: userPasswords.password2,
         });
         console.log(data);
@@ -44,7 +46,7 @@ export default function PasswordChange() {
     <div className='password-card'>
       <div className='password-container'>
         <div className='foryou'>
-          <img src='public/sarisey.png' alt='' />
+          <img src={sari} alt='' />
           <h2>Şifrem</h2>
         </div>
         <form onSubmit={changePassword}>
@@ -59,11 +61,7 @@ export default function PasswordChange() {
               />
               <img
                 className='eye-img'
-                src={
-                  isVisible1
-                    ? 'public/password-off.svg'
-                    : 'public/password-on.svg'
-                }
+                src={isVisible1 ? { passwordOff } : { passwordOn }}
                 alt=''
                 onClick={() => {
                   setIsVisible1(!isVisible1);
@@ -80,11 +78,7 @@ export default function PasswordChange() {
               />
               <img
                 className='eye-img'
-                src={
-                  isVisible2
-                    ? 'public/password-off.svg'
-                    : 'public/password-on.svg'
-                }
+                src={isVisible2 ? { passwordOff } : { passwordOn }}
                 alt=''
                 onClick={() => {
                   setIsVisible2(!isVisible2);
@@ -101,11 +95,7 @@ export default function PasswordChange() {
               />
               <img
                 className='eye-img'
-                src={
-                  isVisible3
-                    ? 'public/password-off.svg'
-                    : 'public/password-on.svg'
-                }
+                src={isVisible3 ? { passwordOff } : { passwordOn }}
                 alt=''
                 onClick={() => {
                   setIsVisible3(!isVisible3);

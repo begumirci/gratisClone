@@ -1,7 +1,3 @@
-import React from 'react'
-
 export default function MyNotification() {
-  return (
-    <div className='notification-card'>Bilgilerim</div>
-  )
+  return <div className='notification-card'>Bilgilerim</div>;
 }

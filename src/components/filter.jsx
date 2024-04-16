@@ -2,28 +2,9 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { supabase } from '../routes';
 
-const categories = [
-  {
-    id: 1,
-    name: 'Cilt Bakım',
-    subcategories: [
-      'Cilt Temizleme Ürünleri',
-      'Nemlendiriciler',
-      'Göz Bakımı',
-      'El Bakımı',
-    ],
-  },
-  {
-    id: 2,
-    name: 'Makyaj',
-    subcategories: ['Dudak Makyajı', 'Göz Makyajı', 'Makyaj Fırçaları'],
-  },
-  {
-    id: 3,
-    name: 'Saç Bakımı',
-    subcategories: ['Şampuanlar', 'Saç Kremleri', 'Saç Boyaları'],
-  },
-];
+import avatar from '../../public/avatar.svg';
+import anasayfa from '../../public/anasayfa.svg';
+import arrow from '../../public/arrow.png';
 
 export default function Filter({ setIsOpen }) {
   const [isSignin, setSignin] = useState(false);
@@ -89,12 +70,12 @@ export default function Filter({ setIsOpen }) {
           {isSignin ? (
             <div className='drawer-main'>
               <Link to='/' className='w-img' onClick={handleClose}>
-                <img src='public/anasayfa.svg' alt='' />
+                <img src='/anasayfa.svg' alt='' />
                 <span>Anasayfa</span>
               </Link>
               <Link className='category' onClick={handleCategory}>
                 <span>Kategoriler</span>
-                <img src='public/arrow.png' alt='' />
+                <img src='/arrow.png' alt='' />
               </Link>
               <Link onClick={handleClose}>
                 <span>Markalar</span>
@@ -105,15 +86,15 @@ export default function Filter({ setIsOpen }) {
                 className='w-img'
                 onClick={handleClose}
               >
-                <img src='public/cargo.png' alt='' />
+                <img src='/cargo.png' alt='' />
                 <span>Siparişlerim</span>
               </Link>
               <Link className='w-img' onClick={handleClose}>
-                <img src='public/gift-card.png' alt='' />
+                <img src='/gift-card.png' alt='' />
                 <span>Hediye Kart</span>
               </Link>
               <Link className='w-img' onClick={handleClose}>
-                <img src='public/help-white.png' alt='' />
+                <img src='/help-white.png' alt='' />
                 <span>Yardım ve Destek</span>
               </Link>
               <Link onClick={signOut}>Çıkış Yap</Link>
@@ -121,27 +102,27 @@ export default function Filter({ setIsOpen }) {
           ) : (
             <div className='drawer-main'>
               <Link to='/' className='w-img' onClick={handleClose}>
-                <img src='public/anasayfa.svg' alt='' />
+                <img src='/anasayfa.svg' alt='' />
                 <span>Anasayfa</span>
               </Link>
               <Link className='category' onClick={handleCategory}>
                 <span>Kategoriler</span>
-                <img src='public/arrow.png' alt='' />
+                <img src='/arrow.png' alt='' />
               </Link>
               <Link onClick={handleClose}>
                 <span>Markalar</span>
               </Link>
               <Link onClick={handleClose}>Kampanyalar</Link>
               <Link to='/login' className='w-img' onClick={handleClose}>
-                <img src='public/cargo.png' alt='' />
+                <img src='/cargo.png' alt='' />
                 <span>Siparişlerim</span>
               </Link>
               <Link className='w-img' onClick={handleClose}>
-                <img src='public/gift-card.png' alt='' />
+                <img src='/gift-card.png' alt='' />
                 <span>Hediye Kart</span>
               </Link>
               <Link className='w-img' onClick={handleClose}>
-                <img src='public/help-white.png' alt='' />
+                <img src='/help-white.png' alt='' />
                 <span>Yardım ve Destek</span>
               </Link>
             </div>

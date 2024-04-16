@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import { contexim } from '../layouts/main-layout';
+import sari from '../../public/sarisey.png';
 
 export default function Carosel() {
   const { allProducts } = useContext(contexim);
@@ -50,7 +51,7 @@ export default function Carosel() {
   return (
     <div className='container'>
       <div className='foryou'>
-        <img src='public/sarisey.png' alt='' />
+        <img src={sari} alt='' />
         <h2>Sizin İçin Seçtiklerimiz</h2>
       </div>
       <div className='carosel-cart'>
