@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import BasketItem from './basket-item';
 import { contexim } from '../layouts/main-layout';
 import basket from '../../public/basket.png';
-import HeaderBasket from '../../public/header-basket.svg';
+import basketHeader from '../../public/header-basket.svg';
 
 export default function HeaderBasket() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +30,7 @@ export default function HeaderBasket() {
                 />
               ) : (
                 <div className='emty-basket'>
-                  <img src={HeaderBasket} alt='' />
+                  <img src={basketHeader} alt='' />
                   <h4>Sepetiniz Boş</h4>
                 </div>
               )}
