@@ -1,7 +1,9 @@
 import { useContext, useState } from 'react';
-import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { supabase } from '../../routes';
 import { contexim } from '../../layouts/main-layout';
+import fullHeart from '../../public/dolukalp.png';
+import emtyHeart from '../../public/heart.png';
 
 export async function loader({ params }) {
   const { data: products, error } = await supabase
@@ -56,11 +58,7 @@ export default function Product() {
                       </span>
                     </div>
                     <img
-                      src={
-                        isLike[x.id]
-                          ? 'public/dolukalp.png'
-                          : 'public/heart.png'
-                      }
+                      src={isLike[x.id] ? { fullHeart } : { emtyHeart }}
                       alt=''
                       style={{ width: '30px', height: '30px' }}
                       onClick={() => like(x)}
