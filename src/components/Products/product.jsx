@@ -2,8 +2,8 @@ import { useContext, useState } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { supabase } from '../../routes';
 import { contexim } from '../../layouts/main-layout';
-import fullHeart from '../../public/dolukalp.png';
-import emtyHeart from '../../public/heart.png';
+import fullHeart from '../../../public/dolukalp.png';
+import emtyHeart from '../../../public/heart.png';
 
 export async function loader({ params }) {
   const { data: products, error } = await supabase
