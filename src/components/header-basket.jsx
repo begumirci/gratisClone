@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import BasketItem from './basket-item';
 import { contexim } from '../layouts/main-layout';
-import basket from '../../public/basket.png';
+import myBasket from '../../public/basket.png';
 import basketHeader from '../../public/header-basket.svg';
 
 export default function HeaderBasket() {
@@ -17,7 +17,7 @@ export default function HeaderBasket() {
   return (
     <>
       <Link className='header-action count-wrapper' to='#'>
-        <img src={basket} alt='' onClick={handleClick} />
+        <img src={myBasket} alt='' onClick={handleClick} />
         <span>{totalProduct}</span>
         {isOpen && (
           <div className='basket'>
