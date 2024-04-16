@@ -4,7 +4,7 @@ import instagram from '../../public/instagram.svg';
 import twitter from '../../public/twitter.svg';
 import youtube from '../../public/youtube.svg';
 import phone from '../../public/phone.png';
-import shop from '../../public/shop,png';
+import shop from '../../public/shop.png';
 import catolog from '../../public/catalog.png';
 import apple from '../../public/apple.svg';
 import googlePlay from '../../public/play.svg';
