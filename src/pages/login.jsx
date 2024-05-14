@@ -63,7 +63,7 @@ export default function Login() {
             />
             <img
               className='eye'
-              src={isVisible ? { passwordclose } : { passwordopen }}
+              src={isVisible ? passwordclose : passwordopen}
               alt=''
               onClick={showPassword}
             />

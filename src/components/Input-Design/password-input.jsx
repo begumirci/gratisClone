@@ -19,7 +19,7 @@ export default function PasswordInput({ handleChange, value }) {
       />
       <img
         className='eye'
-        src={isVisible ? { passwordOff } : { passwordOn }}
+        src={isVisible ? passwordOff : passwordOn}
         alt=''
         onClick={showPassword}
       />
