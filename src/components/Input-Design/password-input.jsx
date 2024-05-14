@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import passwordOn from '../../../public/password-on.svg';
-import passwordOff from '../../../public/password-off.svg';
+// import passwordOn from '../../../public/password-on.svg';
+// import passwordOff from '../../../public/password-off.svg';
 export default function PasswordInput({ handleChange, value }) {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -19,7 +19,9 @@ export default function PasswordInput({ handleChange, value }) {
       />
       <img
         className='eye'
-        src={isVisible ? { passwordOff } : { passwordOn }}
+        src={
+          isVisible ? './public//password-off.svg' : './public//password-on.svg'
+        }
         alt=''
         onClick={showPassword}
       />
