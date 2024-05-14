@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 import { supabase } from '../routes.jsx';
 import { useNavigate } from 'react-router-dom';
-// import passwordclose from '../../public/password-off.svg';
-// import passwordopen from '../../public/password-on.svg';
+import passwordclose from '../../public/password-off.svg';
+import passwordopen from '../../public/password-on.svg';
 
 export default function Login() {
   const [isVisible, setIsVisible] = useState(false);
@@ -63,11 +63,7 @@ export default function Login() {
             />
             <img
               className='eye'
-              src={
-                isVisible
-                  ? './public//password-off.svg'
-                  : './public//password-on.svg'
-              }
+              src={isVisible ? { passwordclose } : { passwordopen }}
               alt=''
               onClick={showPassword}
             />
