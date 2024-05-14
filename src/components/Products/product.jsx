@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import { supabase } from '../../routes';
 import { contexim } from '../../layouts/main-layout';
 import fullHeart from '../../../public/dolukalp.png';
@@ -21,8 +21,6 @@ export default function Product() {
   const [count, setCount] = useState(1);
   const { addToCart, like, isLike } = useContext(contexim);
   const { products } = useLoaderData();
-
-  const navigate = useNavigate();
 
   function increase() {
     setCount(count + 1);
@@ -58,7 +56,7 @@ export default function Product() {
                       </span>
                     </div>
                     <img
-                      src={isLike[x.id] ? { fullHeart } : { emtyHeart }}
+                      src={isLike[x.id] ? fullHeart : emtyHeart}
                       alt=''
                       style={{ width: '30px', height: '30px' }}
                       onClick={() => like(x)}

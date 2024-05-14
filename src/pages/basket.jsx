@@ -49,9 +49,7 @@ export default function Basket() {
                         </svg>
                       </button>
                       <img
-                        src={
-                          isLike[x.product_id] ? { fullHeart } : { emtyHeart }
-                        }
+                        src={isLike[x.product_id] ? fullHeart : emtyHeart}
                         alt=''
                         style={{ width: '30px', height: '30px' }}
                       />

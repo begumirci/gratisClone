@@ -845,7 +845,7 @@ button {
     z-index: 2;
     position: absolute;
     top: 40% !important;
-    right: -60px !important;
+    right: 0 !important;
   }
 
   & .slick-prev {
@@ -856,7 +856,7 @@ button {
     z-index: 2;
     position: absolute;
     top: 40% !important;
-    left: -60px !important;
+    left: 0 !important;
   }
 }
 
@@ -2067,6 +2067,11 @@ select option {
         margin-right: -5px;
         margin-left: -5px;
         width: 720px;
+        & a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
       }
     }
   }

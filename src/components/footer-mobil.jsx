@@ -11,6 +11,10 @@ import googlePlay from '../../public/play.svg';
 import logoFooter from '../../public/logo-footer.svg';
 
 export default function FooterMobil() {
+  function up() {
+    window.scrollTo(0, 0);
+  }
+
   return (
     <div>
       <div className='footer-mobil-bar'>
@@ -196,12 +200,13 @@ export default function FooterMobil() {
             <div className='footer-auth'>
               <span>Gratis'e</span>
               <div className='auth-group'>
-                <button className='btn btn-'>
-                  <a href='/login'>Giriş Yap</a>
-                </button>
-                <button className='btn btn--'>
-                  <a href='/register'>Üye Ol</a>
-                </button>
+                <Link to='/login' className='btn btn-' onClick={up}>
+                  Giriş Yap
+                </Link>
+
+                <Link to='/register' className='btn btn-' onClick={up}>
+                  Üye Ol
+                </Link>
               </div>
             </div>
           </div>
